@@ -13,6 +13,7 @@
   (package-refresh-contents))
 
 (defvar my-packages '(markdown-mode
+		      ido-ubiquitous
                       org-magit auctex clojure-mode coffee-mode
                       jabber jira deft gist haml-mode haskell-mode
                       magit paredit projectile python sass-mode
