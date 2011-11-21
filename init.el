@@ -5,14 +5,21 @@
 ;; https://github.com/technomancy/emacs-starter-kit
 
 (require 'package)
+
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
+;; This repository has ESS
+(add-to-list 'package-archives
+             '("ess" . "http://kieranhealy.org/packages/") t)
+
 (package-initialize)
+
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(markdown-mode ido-ubiquitous
+(defvar my-packages '(markdown-mode ido-ubiquitous ess
                       org-magit auctex clojure-mode coffee-mode
                       jabber jira deft gist haml-mode haskell-mode
                       magit paredit projectile python sass-mode
@@ -37,3 +44,4 @@
 
 ;; Require packages in modules/
 (mapc 'load (directory-files module-dir nil "^[^#].*el$"))
+(server-start)

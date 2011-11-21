@@ -8,13 +8,17 @@
 ;; spell-checking
 (setq-default ispell-program-name "aspell")
 (add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'text-mode-hook 'auto-fill-mode)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; programming hooks
 (add-hook 'prog-mode-hook 'linum-mode)
 
-;;better buffer names
+;; uniq buffer names
 (require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-separator "/")
+(setq uniquify-ignore-buffers-re "^\\*")
+
 
 ;;keybindings
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
