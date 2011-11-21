@@ -1,5 +1,6 @@
-;; Various functions, many from EmacsWiki
+;; Various functions, many from EmacsWipki
 
+;; This function is from the Emacs Wiki
 (defun iwb ()
   "indent whole buffer"
   (interactive)
@@ -7,6 +8,8 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 
+;; This function is from Emacs-Prelude
+;; https://github.com/bbatsov/emacs-prelude
 (defun indent-and-copy (begin end)
   (interactive "r")
   (let ((buffer (current-buffer)))
