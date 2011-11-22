@@ -25,5 +25,5 @@
 
 ;;;
 (electric-pair-mode t)
-(electric-indent-mode t)
-(electric-layout-mode t)
+;;(electric-indent-mode t)
+;;(electric-layout-mode t)
