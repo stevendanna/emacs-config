@@ -122,7 +122,7 @@
     `(minibuffer-prompt ((t (:foreground ,zenburn-yellow))))
     `(mode-line ((t (:foreground ,zenburn-yellow :background "#1e2320"
 		      :box (:color "#1e2320" :line-width 2)))))
-    `(region ((t (:foreground nil :background ,zenburn-bg+2))))
+    `(region ((t (:foreground nil :background ,zenburn-blue))))
     `(scroll-bar ((t (:background ,zenburn-bg+2))))
     `(secondary-selection ((t (:foreground nil :background ,zenburn-bg+2))))
     `(tool-bar ((t (:background ,zenburn-bg+2))))

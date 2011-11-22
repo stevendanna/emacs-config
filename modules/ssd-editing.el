@@ -23,7 +23,7 @@
 ;;keybindings
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
 
-;;;
+;; electric modes
 (electric-pair-mode t)
 (electric-indent-mode t)
 (electric-layout-mode t)
