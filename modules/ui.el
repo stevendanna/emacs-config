@@ -1,6 +1,6 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path (concat emacs-dir "themes/"))
-(load-theme 'afterthought t)
+(load-theme 'zenburn t)
 
 ;; Remove uncessary UI elements
 (scroll-bar-mode -1)
