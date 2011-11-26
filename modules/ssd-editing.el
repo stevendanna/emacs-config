@@ -26,3 +26,9 @@
 (electric-pair-mode t)
 ;;(electric-indent-mode t)
 ;;(electric-layout-mode t)
+
+;; Autocompletion/snippets
+(global-set-key (kbd "M-'") 'hippie-expand)
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory (concat emacs-dir "snippets"))
