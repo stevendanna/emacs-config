@@ -1,10 +1,11 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path (concat emacs-dir "themes/"))
-(load-theme 'zenburn t)
+(load-theme 'ssd-colors t)
 
 ;; Remove uncessary UI elements
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
+(fringe-mode -1)
 (blink-cursor-mode -1)
 (setq inhibit-startup-screen t)
 (unless (eq system-type 'darwin)
@@ -17,3 +18,9 @@
 
 ;;behavior
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; linum-mode style
+(setq linum-format "%d ")
+
+;; font
+(set-face-attribute 'default nil :height 90 :family "Monaco")

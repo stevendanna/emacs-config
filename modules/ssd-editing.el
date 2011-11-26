@@ -19,7 +19,6 @@
 (setq uniquify-separator "/")
 (setq uniquify-ignore-buffers-re "^\\*")
 
-
 ;;keybindings
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
 
