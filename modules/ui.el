@@ -1,6 +1,12 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path (concat emacs-dir "themes/"))
 (load-theme 'ssd-colors t)
+;; other ui
+;; move into the theme eventually
+(set-face-attribute 'mode-line nil :box nil)
+(set-face-attribute 'mode-line-inactive nil :box nil)
+;; font
+(set-face-attribute 'default nil :height 90 :family "Monaco")
 
 ;; Remove uncessary UI elements
 (scroll-bar-mode -1)
@@ -21,6 +27,3 @@
 
 ;; linum-mode style
 (setq linum-format "%d ")
-
-;; font
-(set-face-attribute 'default nil :height 90 :family "Monaco")
