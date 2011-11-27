@@ -8,7 +8,7 @@
 ;; font
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :height 120 :family "Monaco")
-    (set-face-attribute 'default nil :height 90 :family "Monaco"))
+    (set-face-attribute 'default nil :height 100 :family "Monaco"))
 
 ;; Remove uncessary UI elements
 (scroll-bar-mode -1)
