@@ -6,7 +6,7 @@
 (set-face-attribute 'mode-line nil :box nil)
 (set-face-attribute 'mode-line-inactive nil :box nil)
 ;; font
-(set-face-attribute 'default nil :height 90 :family "Monaco")
+(set-face-attribute 'default nil :height 100 :family "Monaco")
 
 ;; Remove uncessary UI elements
 (scroll-bar-mode -1)
