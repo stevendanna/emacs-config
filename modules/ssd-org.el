@@ -5,7 +5,7 @@
       org-agenda-files '("~/org/"
                          "~/org/deft"))
 
-p;; deft for quick note taking
+;; deft for quick note taking
 (require 'deft)
 (setq deft-extension "org"
       deft-directory "~/org/deft/"
