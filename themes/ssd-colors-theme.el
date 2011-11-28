@@ -10,7 +10,6 @@
  '(default ((t (:background "black" :foreground "white" ))))
  '(cursor ((t (:background "yellow"))))
  '(mode-line ((t (:foreground "black" :background "white"))))
- '(mode-line-inactive ((t (:foreground "white" :background "black"))))
  '(region ((t (:background "blue"))))
  ;; font-lock
  '(font-lock-builtin-face ((t (:foreground "LightSteelBlue"))))
