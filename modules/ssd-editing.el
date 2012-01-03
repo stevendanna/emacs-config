@@ -32,3 +32,8 @@
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory (concat emacs-dir "snippets"))
+
+;; WriteGood-mode
+(add-to-list 'load-path (concat vendor-dir "writegood-mode.el"))
+(require 'writegood-mode)
+(add-hook 'text-mode-hook 'writegood-turn-on)
