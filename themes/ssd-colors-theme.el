@@ -1,5 +1,5 @@
-;; ssd-colors-theme.el: Emacs color theme inspired by dark-laptop.
 
+;; ssd-colors-theme.el: Emacs color theme inspired by dark-laptop.
 (deftheme ssd-colors
   "Emacs24 color theme inspired by dark-laptop")
 
@@ -24,4 +24,5 @@
  '(font-lock-type-face ((t (:foreground "PaleGreen"))))
  '(font-lock-variable-name-face ((t (:foreground "LightGoldenrod"))))
  '(font-lock-warning-face ((t (:foreground "Pink" :weight bold))))
+ '(hl-line ((t (:background "gray13"))))
  )

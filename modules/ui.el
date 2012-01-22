@@ -29,3 +29,6 @@
 
 ;; linum-mode style
 (setq linum-format "%d ")
+
+;;hl-line
+(global-hl-line-mode)
