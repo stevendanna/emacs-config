@@ -1,6 +1,7 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path (concat emacs-dir "themes/"))
-(load-theme 'ssd-colors t)
+(load-theme 'wheatgrass t)
+
 ;; other ui
 ;; move into the theme eventually
 (set-face-attribute 'mode-line nil :box nil)
