@@ -21,6 +21,8 @@
 
 ;;keybindings
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
+(global-set-key (kbd "C-c +") 'text-scale-increase)
+(global-set-key (kbd "C-c -") 'text-scale-decrease)
 
 ;; electric modes
 (electric-pair-mode t)
