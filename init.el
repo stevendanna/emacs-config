@@ -20,7 +20,7 @@
   (package-refresh-contents))
 
 (defvar my-packages '(markdown-mode ido-ubiquitous ess
-                      ruby-end inf-ruby
+                      ruby-end inf-ruby flymake flymake-ruby flymake-shell
                       org-magit auctex clojure-mode coffee-mode
                       jabber jira deft gist haml-mode haskell-mode
                       magit paredit projectile python sass-mode
