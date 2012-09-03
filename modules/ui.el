@@ -1,6 +1,6 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path (concat emacs-dir "themes/"))
-(load-theme 'wheatgrass t)
+(load-theme 'ssd-colors t)
 
 ;; other ui
 ;; move into the theme eventually
@@ -32,4 +32,4 @@
 (setq linum-format "%d ")
 
 ;;hl-line
-(global-hl-line-mode)
+;;(global-hl-line-mode)
