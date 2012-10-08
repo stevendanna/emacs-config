@@ -9,12 +9,13 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
+
+(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
 ;; This repository has ESS
 (add-to-list 'package-archives
              '("ess" . "http://kieranhealy.org/packages/") t)
 
 (package-initialize)
-
 
 (when (not package-archive-contents)
   (package-refresh-contents))
