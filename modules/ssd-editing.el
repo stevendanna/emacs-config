@@ -36,6 +36,10 @@
 (yas/initialize)
 (yas/load-directory (concat emacs-dir "snippets"))
 
+;; Integrate hippie-expand with ya-snippet
+(add-to-list 'hippie-expand-try-functions-list
+             'yas/hippie-try-expand)
+
 ;; WriteGood-mode
 (add-to-list 'load-path (concat vendor-dir "writegood-mode.el"))
 (require 'writegood-mode)
