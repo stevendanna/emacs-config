@@ -24,5 +24,5 @@
  '(font-lock-type-face ((t (:foreground "PaleGreen"))))
  '(font-lock-variable-name-face ((t (:foreground "LightGoldenrod"))))
  '(font-lock-warning-face ((t (:foreground "Pink" :weight bold))))
- '(hl-line ((t (:background "gray13"))))
+ '(hl-line ((t (:background "#333333"))))
  )
