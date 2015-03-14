@@ -20,12 +20,13 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(markdown-mode ido-ubiquitous ess ruby-tools ruby-mode
-                      ruby-end inf-ruby flymake flymake-ruby flymake-shell
-                      org-magit auctex clojure-mode coffee-mode
-                      jabber jira deft gist haml-mode haskell-mode
-                      magit paredit projectile python sass-mode
-                      scss-mode yaml-mode yari yasnippet confluence)
+(defvar my-packages '(markdown-mode ido-ubiquitous ess ruby-tools
+                      ruby-mode ruby-end inf-ruby flymake
+                      flymake-ruby flymake-shell org-magit auctex
+                      clojure-mode coffee-mode jabber deft gist
+                      haml-mode haskell-mode magit paredit
+                      projectile python sass-mode scss-mode
+                      yaml-mode yari yasnippet)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
