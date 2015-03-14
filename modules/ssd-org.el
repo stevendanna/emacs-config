@@ -5,20 +5,6 @@
       org-agenda-files '("~/org/"
                          "~/org/deft"))
 
-;; use MobileOrg for syncing and
-;; mobile access
-(setq org-mobile-directory "~/Dropbox/MobileOrg")
-(org-mobile-pull)
-
-;; This is currently a bit too slow to be useful
-;;(add-hook 'after-save-hook 'org-mobile-push-on-save)
-;;(add-hook 'org-mode-hook 'org-mobile-pull)
-
-(defun org-mobile-push-on-save ()
-  "Sync on Save for OrgMode buffers"
-  (if (eq major-mode 'org-mode)
-      (org-mobile-push)))
-
 ;; org-capture
 ;; to quickly capture new tasks
 (define-key global-map "\C-cc" 'org-capture)
