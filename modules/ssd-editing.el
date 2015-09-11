@@ -24,6 +24,7 @@
 (global-set-key (kbd "C-c +") 'text-scale-increase)
 (global-set-key (kbd "C-c -") 'text-scale-decrease)
 (global-set-key (kbd "C-.") 'repeat)
+(global-set-key (kbd "C-c g") 'magit-status)
 
 ;; electric modes
 (electric-pair-mode t)
@@ -33,7 +34,7 @@
 ;; Autocompletion/snippets
 (global-set-key (kbd "M-'") 'hippie-expand)
 (require 'yasnippet)
-(yas/initialize)
+;;(yas/initialize)
 (yas/load-directory (concat emacs-dir "snippets"))
 
 ;; Integrate hippie-expand with ya-snippet

@@ -1,5 +1,7 @@
 *~
 \#*
+*.dat
+edts/
 auto-save-list
 recentf
 savehist

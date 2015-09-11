@@ -14,7 +14,8 @@
 ;; This repository has ESS
 (add-to-list 'package-archives
              '("ess" . "http://kieranhealy.org/packages/") t)
-
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -26,7 +27,7 @@
                       clojure-mode coffee-mode jabber deft gist
                       haml-mode haskell-mode magit paredit
                       projectile python sass-mode scss-mode
-                      yaml-mode yari yasnippet)
+                      yaml-mode yari yasnippet edts projmake-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
