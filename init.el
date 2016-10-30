@@ -7,27 +7,21 @@
 (require 'package)
 
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
-
-(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
-;; This repository has ESS
-(add-to-list 'package-archives
-             '("ess" . "http://kieranhealy.org/packages/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 (defvar my-packages '(markdown-mode ido-ubiquitous ess ruby-tools
-                      ruby-mode ruby-end inf-ruby flymake
+                      ruby-mode ruby-end inf-ruby flymake erlang
                       flymake-ruby flymake-shell org-magit auctex
                       clojure-mode coffee-mode jabber deft gist
                       haml-mode haskell-mode magit paredit
                       projectile python sass-mode scss-mode
-                      yaml-mode yari yasnippet edts projmake-mode)
+                      yaml-mode yari yasnippet edts projmake-mode
+                      writegood-mode writeroom-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
