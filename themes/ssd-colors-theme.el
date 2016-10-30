@@ -8,6 +8,7 @@
  'ssd-colors
  ;; basics
  '(default ((t (:background "black" :foreground "white" ))))
+ '(fringe ((t (:background "black" :foreground "black" ))))
  '(cursor ((t (:background "yellow"))))
  '(mode-line ((t (:foreground "black" :background "white"))))
  '(region ((t (:background "blue"))))
