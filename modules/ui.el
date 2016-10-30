@@ -15,7 +15,8 @@
 (tool-bar-mode -1)
 (blink-cursor-mode -1)
 (setq inhibit-startup-screen t)
-(menu-bar-mode -1)
+(if (not (eq system-type 'darwin))
+    (menu-bar-mode -1))
 
 ;; Modeline
 (line-number-mode t)
