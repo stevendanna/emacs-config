@@ -12,6 +12,7 @@
 
 ;; programming hooks
 (add-hook 'prog-mode-hook 'linum-mode)
+;; (add-hook 'prog-mode-hook 'fci-mode)
 
 ;; uniq buffer names
 (require 'uniquify)
@@ -25,6 +26,7 @@
 (global-set-key (kbd "C-c -") 'text-scale-decrease)
 (global-set-key (kbd "C-.") 'repeat)
 (global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c a") '(lambda ()  (interactive) (ansi-term "~/bin/start-shell")))
 
 ;; electric modes
 (electric-pair-mode t)
@@ -41,7 +43,22 @@
 (add-to-list 'hippie-expand-try-functions-list
              'yas/hippie-try-expand)
 
-;; WriteGood-mode
-(add-to-list 'load-path (concat vendor-dir "writegood-mode.el"))
 (require 'writegood-mode)
 (add-hook 'text-mode-hook 'writegood-turn-on)
+
+(defun move-line-up ()
+  (interactive)
+  (when (/= (line-number-at-pos) 1)
+    (transpose-lines 1)
+    (forward-line -2)
+    (indent-according-to-mode)))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(global-set-key (kbd "M-p") 'move-line-up)
+(global-set-key (kbd "M-n") 'move-line-down)
