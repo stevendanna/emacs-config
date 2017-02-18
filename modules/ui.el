@@ -1,21 +1,41 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path (concat emacs-dir "themes/"))
 (load-theme 'ssd-colors t)
-;; other ui
-;; move into the theme eventually
+
+;;
+;; powerline
+;;
+;; (require 'powerline)
+;; (setq powerline-gui-use-vcs-glyph t)
+;; (setq powerline-default-separator 'utf-8)
+;; (powerline-default-theme)
+;;
+;; (add-hook 'after-make-frame-functions
+;;           (lambda (frame)
+;;             (message "Reloading theme")
+;;             (select-frame frame)
+;;             (load-theme 'material t)))
+
+;; ;; other ui
+;; ;; move into the theme eventually
 (set-face-attribute 'mode-line nil :box nil)
 (set-face-attribute 'mode-line-inactive nil :box nil)
+
 ;; font
 (if (eq system-type 'darwin)
-    (set-face-attribute 'default nil :height 140 :family "mononoki")
-    (set-face-attribute 'default nil :height 100 :family "Monaco"))
+    (set-face-attribute 'default nil :height 140 :family "Hack")
+  (set-face-attribute 'default nil :height 100 :family "Monaco"))
+
+;; Ignor bell
+(setq ring-bell-function 'ignore)
+(setq visible-bell t)
 
 ;; Remove uncessary UI elements
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (blink-cursor-mode -1)
 (setq inhibit-startup-screen t)
-(if (not (eq system-type 'darwin))
+(if (or (display-graphic-p) (not (eq system-type 'darwin)))
     (menu-bar-mode -1))
 
 ;; Modeline

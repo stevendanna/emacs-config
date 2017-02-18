@@ -1,5 +1,4 @@
 ;; Settings for better editing
-
 (setq-default indent-tabs-mode nil)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (delete-selection-mode t)
@@ -11,6 +10,7 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; programming hooks
+(global-flycheck-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 ;; (add-hook 'prog-mode-hook 'fci-mode)
 
@@ -25,7 +25,6 @@
 (global-set-key (kbd "C-c +") 'text-scale-increase)
 (global-set-key (kbd "C-c -") 'text-scale-decrease)
 (global-set-key (kbd "C-.") 'repeat)
-(global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c a") '(lambda ()  (interactive) (ansi-term "~/bin/start-shell")))
 
 ;; electric modes
@@ -33,18 +32,34 @@
 ;;(electric-indent-mode t)
 ;;(electric-layout-mode t)
 
-;; Autocompletion/snippets
-(global-set-key (kbd "M-'") 'hippie-expand)
-(require 'yasnippet)
-;;(yas/initialize)
-(yas/load-directory (concat emacs-dir "snippets"))
-
-;; Integrate hippie-expand with ya-snippet
-(add-to-list 'hippie-expand-try-functions-list
-             'yas/hippie-try-expand)
-
 (require 'writegood-mode)
 (add-hook 'text-mode-hook 'writegood-turn-on)
+
+;; store all autosave files in the tmp dir
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+(setq backup-by-copying t
+      backup-directory-alist '(("." . "~/.emacs.d/backup"))
+      delete-old-versions t
+      kept-new-versions 24
+      kept-old-versions 12
+      version-control t)
+
+(setq create-lockfiles nil)
+
+(defun gotosrc ()
+  "Switch to a project"
+  (interactive)
+  (ivy-read "project:" (delete ".."
+                               (delete "."
+                                       (append (directory-files "~/oc/code/opscode" t )
+                                               (directory-files "~/oc/code/opscode-cookbooks" t)
+                                               (directory-files "~/src" t)
+                                               (directory-files "~/src/habitat-sh" t))))
+            :action (lambda (x)
+                      (neotree-dir x))))
+(global-set-key (kbd "C-c g") 'gotosrc)
 
 (defun move-line-up ()
   (interactive)
@@ -59,6 +74,5 @@
   (transpose-lines 1)
   (forward-line -1)
   (indent-according-to-mode))
-
 (global-set-key (kbd "M-p") 'move-line-up)
 (global-set-key (kbd "M-n") 'move-line-down)

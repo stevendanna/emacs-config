@@ -1,27 +1,22 @@
 ;; Emacs configuration entry point
-
 ;; The following is based on the installation directions
 ;; for Emacs Starter kit, which can be found at
 ;; https://github.com/technomancy/emacs-starter-kit
 
 (require 'package)
-
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(markdown-mode ido-ubiquitous ess ruby-tools
-                      ruby-mode ruby-end inf-ruby flymake erlang
-                      flymake-ruby flymake-shell org-magit auctex
-                      clojure-mode coffee-mode jabber deft gist
-                      haml-mode haskell-mode magit paredit
-                      projectile python sass-mode scss-mode
-                      yaml-mode yari yasnippet edts projmake-mode
-                      writegood-mode writeroom-mode)
+(defvar my-packages '(markdown-mode ess ruby-tools ruby-mode
+                      ruby-end inf-ruby flycheck erlang org-magit
+                      auctex clojure-mode coffee-mode gist
+                      haml-mode haskell-mode magit paredit python
+                      sass-mode scss-mode yaml-mode yari
+                      yasnippet edts writegood-mode
+                      writeroom-mode ivy counsel swiper)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
