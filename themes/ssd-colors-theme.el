@@ -1,4 +1,3 @@
-
 ;; ssd-colors-theme.el: Emacs color theme inspired by dark-laptop.
 (deftheme ssd-colors
   "Emacs24 color theme inspired by dark-laptop")

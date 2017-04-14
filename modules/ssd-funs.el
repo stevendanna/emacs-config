@@ -1,5 +1,13 @@
 ;; Various functions, many from EmacsWipki
 
+(defun add-todo ()
+  (interactive)
+  (insert (format-time-string "TODO(ssd) %Y-%m-%d: "))
+  (comment-line 1)
+  (previous-line)
+  (end-of-line))
+(global-set-key (kbd "C-c t") 'add-todo)
+
 ;; This function is from the Emacs Wiki
 (defun iwb ()
   "indent whole buffer"

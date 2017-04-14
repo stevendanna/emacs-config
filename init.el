@@ -11,12 +11,13 @@
   (package-refresh-contents))
 
 (defvar my-packages '(markdown-mode ess ruby-tools ruby-mode
-                      ruby-end inf-ruby flycheck erlang org-magit
-                      auctex clojure-mode coffee-mode gist
-                      haml-mode haskell-mode magit paredit python
-                      sass-mode scss-mode yaml-mode yari
-                      yasnippet edts writegood-mode
-                      writeroom-mode ivy counsel swiper)
+                      ruby-end inf-ruby flycheck flycheck-rust
+                      erlang auctex clojure-mode coffee-mode gist
+                      haml-mode cargo rust-mode haskell-mode
+                      magit paredit python sass-mode scss-mode
+                      yaml-mode yari yasnippet edts
+                      writegood-mode writeroom-mode ivy counsel
+                      swiper)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

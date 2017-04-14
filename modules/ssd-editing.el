@@ -49,19 +49,18 @@
 (setq create-lockfiles nil)
 
 (defun gotosrc ()
-  "Switch to a project"
+  "Switch to a project."
   (interactive)
-  (ivy-read "project:" (delete ".."
-                               (delete "."
-                                       (append (directory-files "~/oc/code/opscode" t )
-                                               (directory-files "~/oc/code/opscode-cookbooks" t)
-                                               (directory-files "~/src" t)
-                                               (directory-files "~/src/habitat-sh" t))))
+  (ivy-read "project:" (append (directory-files "~/oc/code/opscode" t "^[^.]")
+                               (directory-files "~/oc/code/opscode-cookbooks" t "^[^.]")
+                               (directory-files "~/src" t "^[^.]")
+                               (directory-files "~/src/habitat-sh" t "^[^.]"))
             :action (lambda (x)
                       (neotree-dir x))))
-(global-set-key (kbd "C-c g") 'gotosrc)
+(global-set-key (kbd "C-c p") 'gotosrc)
 
 (defun move-line-up ()
+  "Move the content of the current line up, reindenting appropriately."
   (interactive)
   (when (/= (line-number-at-pos) 1)
     (transpose-lines 1)
@@ -69,6 +68,7 @@
     (indent-according-to-mode)))
 
 (defun move-line-down ()
+  "Move the content of the current line down, reindenting appropriately."
   (interactive)
   (forward-line 1)
   (transpose-lines 1)
